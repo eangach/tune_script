@@ -14,6 +14,23 @@ module TuneScript
 
         output.must_equal 'some data'
       end
+
+      it 'logs stdout to stdout' do
+        out, err = capture_subprocess_io do
+          script = %(set x to "some data"\nget x)
+          TuneScript.osascript script
+        end
+        out.must_match(/DEBUG -- osascript: some data\n$/)
+        err.must_equal ''
+      end
+
+      it 'logs stderr to stdout' do
+        out, err = capture_subprocess_io do
+          -> { TuneScript.osascript '.' }.must_raise RuntimeError
+        end
+        out.must_match(/ERROR -- osascript: 0:1: syntax error: A unknown token can’t go here\. \(-2740\)\n$/)
+        err.must_equal ''
+      end
     end
   end
 end

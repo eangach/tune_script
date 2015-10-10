@@ -10,11 +10,18 @@ module TuneScript
 
     o, e, s = Open3.capture3 cmd
 
-    unless s.success?
-      warn e
+    o.chomp!
+    e.chomp!
+
+    logger.debug('osascript') { o } unless o.empty?
+
+    if s.success?
+      logger.warn('osascript') { e } unless e.empty?
+    else
+      logger.error('osascript') { e } unless e.empty?
       fail 'ERROR: osascript return code ' + s.exitstatus.to_s
     end
 
-    o.chomp
+    o
   end
 end
