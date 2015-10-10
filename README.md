@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/eangach/tune_script.png)](https://travis-ci.org/eangach/tune_script)
 [![Code Climate](https://codeclimate.com/github/eangach/tune_script/badges/gpa.svg)](https://codeclimate.com/github/eangach/tune_script)
 [![Test Coverage](https://codeclimate.com/github/eangach/tune_script/badges/coverage.svg)](https://codeclimate.com/github/eangach/tune_script/coverage)
-[![Inline docs](http://inch-ci.org/github/eangach/tune_script.svg)](http://inch-ci.org/github/eangach/tune_script)
+[![Inline docs](http://inch-ci.org/github/eangach/tune_script.svg)](http://inch-ci.org/github/eangach/tune_script?branch=master)
 [![Dependency Status](https://gemnasium.com/eangach/tune_script.svg)](https://gemnasium.com/eangach/tune_script)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/eangach/tune_script/blob/master/LICENSE.md)
 
